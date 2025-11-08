@@ -29,7 +29,7 @@ async def handle_client(reader, writer):
     slot = None
     room_code = None
     try:
-        # Expect: {"type":"join","room":"1234","name":"Gowri"}
+        # Expect: {"type":"join","room":"1234","name":"Mr X"}
         line = await reader.readline()
         if not line:
             writer.close(); await writer.wait_closed(); return
@@ -116,3 +116,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
